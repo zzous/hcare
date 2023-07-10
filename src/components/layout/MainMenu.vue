@@ -28,13 +28,13 @@
 <script>
 import { reactive, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { menuLists } from "@/data/menu.js";
+import { menuList } from "@/data/menu.js";
 export default {
     setup () {
         const router = useRouter()
         const route = useRoute()
         const state = reactive({
-            menu:menuLists,
+            menu:menuList,
             currentMenu:''
         })
         const gnbOpen =(depth1, depth2, depth3) =>{
@@ -76,13 +76,13 @@ export default {
                 router,
                 route
                 state.currentMenu = route.meta.sublocation_depth
-                state.menu.forEach((item, index) => {
+                state.menu.forEach((item) => {
                     if(item.label === state.currentMenu[0]){
                         item.isActive = true
-                        item.depth_sub.forEach((sub, index) => {
+                        item.depth_sub.forEach((sub) => {
                             if(sub.label === state.currentMenu[1]){
                                 sub.isActive = true
-                                sub.menuitems.forEach((depth, index) => {
+                                sub.menuitems.forEach((depth) => {
                                     if(depth.label === state.currentMenu[2]){
                                         depth.isActive =true
                                     }
@@ -99,7 +99,7 @@ export default {
         
         return {
             state,
-            menuLists,
+            menuList,
             gnbOpen 
         }
     }
