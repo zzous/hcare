@@ -22,10 +22,11 @@
 <script>
 import { reactive, onMounted, watch, computed } from 'vue'
 import { useStore } from "vuex";
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import MainMenu from "@/components/layout/MainMenu.vue";
 import MainHeader from '@/components/layout/MainHeader.vue';
 import Location from '@/components/layout/Location.vue';
+import _ from 'lodash';
 
 import { _getCategoryList } from '@/api/dashboard'
 
@@ -33,7 +34,6 @@ export default{
     components: { MainMenu, MainHeader, Location },
     
     setup () {
-        const router = useRouter()
         const route = useRoute()
         const store = useStore();
         const counter = computed(() => store.state.moduleA.counter);

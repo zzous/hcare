@@ -4,10 +4,10 @@
     </div>
 </template>
 <script>
-import { getCurrentInstance } from 'vue'
+// import { getCurrentInstance } from 'vue'
 export default{
     setup() {
-        const internalInstance = getCurrentInstance(); 
+        // const internalInstance = getCurrentInstance(); 
     }
 }
 </script>

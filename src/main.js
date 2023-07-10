@@ -5,7 +5,7 @@ import store from '@/store'
 import BootstrapVue from 'bootstrap-vue'
 import moment from 'moment';
 import VueMoment from "vue-momentjs";
-import '@/plugins/lodash'
+// import '@/plugins/lodash';
 import i18n from '@/plugins/i18n';
 import mitt from 'mitt'
 

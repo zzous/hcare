@@ -5,5 +5,13 @@
 </template>
 
 <script>
-    import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+export default {
+    setup () {
+        
+        return {
+            RouterView
+        }
+    }
+}
 </script>
