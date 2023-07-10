@@ -1,0 +1,32 @@
+{
+  "name": "healthcare",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vite --port 8080",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@vue/compat": "^3.3.4",
+    "axios": "^1.4.0",
+    "bootstrap": "^4.6.2",
+    "bootstrap-vue": "^2.23.1",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.1",
+    "moment": "^2.29.4",
+    "tiny-emitter": "^2.1.0",
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.2.2",
+    "vue-momentjs": "^1.0.0",
+    "vue-router": "^4.2.2",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "vite": "^4.3.9"
+  }
+}
