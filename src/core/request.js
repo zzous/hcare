@@ -16,16 +16,14 @@ const request = axios.create({
 
 /**
  * @cancel
- * server 단 취소는 안되고 , front 에서 취소
  */
-// request.isCancel = axios.isCancel;
-
+request.isCancel = axios.isCancel;
 request.interceptors.request.use(
-    // config => {
-    // },
-    // error => {
-    //     return Promise.reject(error);
-    // }
+    config => {
+    },
+    error => {
+        return Promise.reject(error);
+    }
 );
 
 request.interceptors.response.use(

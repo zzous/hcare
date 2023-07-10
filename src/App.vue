@@ -1,10 +1,9 @@
-
 <template>
-  <div id="mainWrap">
-    <RouterView />
-  </div>
+    <div id="mainWrap">
+        <RouterView />
+    </div>
 </template>
 
 <script>
-    import {  RouterView } from 'vue-router'
+    import { RouterView } from 'vue-router'
 </script>

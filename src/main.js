@@ -20,5 +20,8 @@ app.use(BootstrapVue)
 app.use(VueMoment, moment);
 app.use(i18n);
 app.use(store);
-app.mount('#app')
+
 app.config.globalProperties.emitter = emitter
+
+
+app.mount('#app')
