@@ -1,19 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import member from "@/router/modules/member.js"
+import { createRouter, createWebHistory } from 'vue-router';
+import member from '@/router/modules/member.js';
 // import membermanage from "@/router/modules/membermanage.js"
 
 const routes = [
     {
-        path: "/",
-        name: "index",
-        component: () => import("@/layout/Layout.vue"),
+        path: '/',
+        name: 'index',
+        component: () => import('@/layout/Layout.vue')
     },
-    ...member,
+    ...member
     // ...membermanage,
-]
+];
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
-    routes,
-})
+    routes
+});
 
-export default router
+export default router;

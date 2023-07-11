@@ -10,26 +10,26 @@
     </div>
 </template>
 <script>
-import { reactive, watch } from 'vue'
+import { reactive, watch } from 'vue';
 
 export default {
     props: ['pageMeta'],
-    setup (props) {
+    setup(props) {
         const state = reactive({
             pageTitle: '',
             locations: []
-        })
+        });
         watch(() => {
-            if(props.pageMeta) {
+            if (props.pageMeta) {
                 props.pageMeta,
-                state.locations = props.pageMeta
-                state.pageTitle = props.pageMeta[(state.locations.length-1)]
+                state.locations = props.pageMeta;
+                state.pageTitle = props.pageMeta[(state.locations.length - 1)];
             }
-        })
+        });
 
         return {
             state
-        }
+        };
     }
-}
+};
 </script>

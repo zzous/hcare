@@ -1,24 +1,43 @@
 <template>
-    <header class="admin_header">
-        <div class="top_area">
-            <MainMenu />
-            <div>어드민 로고</div>
-            <div style="display:flex; align-items:center">
-                사용자 정보
-                <b-button style="margin-left:10px">로그아웃</b-button>
+    <header class="header">
+        <div class="top-area">
+            <div class="logo">LOGO</div>
+            <div class="title">TITLE</div>
+            <div class="menu">
+                <span @click="openMenu">menu</span>
+                <MainMenu />
             </div>
-        </div> 
+        </div>
     </header>
 </template>
 
 <script>
-import MainMenu from './MainMenu.vue'
+import MainMenu from './MainMenu.vue';
+import { onMounted } from 'vue';
 export default {
     components: {
         MainMenu
     },
     setup() {
-        // 
+        /** @hooks */
+
+        /** @methods */
+        
+        /**
+         * eventBus test
+         */
+        const openMenu = () => {
+            emitter.$emit('openSideMenu');
+        };
+
+        return {
+            openMenu
+        };
     }
-}
+};
 </script>
+
+<style>
+.header { position: relative; background: #ddd; }
+.header .top-area { display: flex; align-items: center; justify-content: space-between; height: 40px; }
+</style>

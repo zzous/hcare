@@ -6,19 +6,19 @@ const moduleA = {
     },
     getters: {
         time2(state) {
-        return state.counter * 2;
+            return state.counter * 2;
         },
         userInfo() {
-            return state.userInfo
+            return state.userInfo;
         }
     },
-    mutations: { 
+    mutations: {
         setCounter(state, value) {
             state.counter = value;
         }
     },
-    actions: { 
+    actions: {
 
-    },
-}
+    }
+};
 export default moduleA;

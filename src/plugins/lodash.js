@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _ from 'lodash';
 
 // export const lodashMixin = {
 //   /** Converts obj keys to camelCase */
@@ -15,10 +15,10 @@ import _ from 'lodash'
 
 
 export const lodashPlugin = {
-  install (app) {
-    app.provide('$_', _)
-  },
-}
+    install(app) {
+        app.provide('$_', _);
+    }
+};
 
 // _.mixin(lodashMixin)
-window._ = _
+window._ = _;

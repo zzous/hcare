@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
 export default {
-    setup () {
+    setup() {
         
         return {
             RouterView
-        }
+        };
     }
-}
+};
 </script>
